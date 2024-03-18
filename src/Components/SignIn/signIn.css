@@ -1,0 +1,209 @@
+* {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.box {
+  padding: 0;
+  margin: 30px;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+}
+
+.image {
+  height: 800px;
+  width: 900px;
+  display: flex;
+  margin-top: 0;
+  padding-left: 0px;
+}
+
+.content {
+  color: #072a48;
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-around;
+  margin: -39px;
+  padding-top: -154px;
+}
+
+.logo {
+  height: 172px;
+  width: 110px;
+  margin-left: -20px;
+  top: -300px;
+  position: relative;
+  margin-left: -26px;
+  top: -351px;
+  position: relative;
+  margin-bottom: -20px;
+}
+
+.content h1 {
+  margin: 10px;
+}
+
+.content h3 {
+  margin: 15px 15px 15px 0;
+  text-align: center;
+  font-size: 15px;
+}
+
+.content h4 {
+  font-weight: normal;
+  margin: 10px;
+  color: #a4a1aa;
+}
+
+.check-box {
+  margin-left: 10px;
+}
+
+.log-in {
+  display: flex;
+  justify-content: center;
+}
+.sign-up {
+  display: flex;
+  justify-content: center;
+}
+.or {
+  display: flex;
+  justify-content: center;
+}
+
+.ul {
+  display: flex;
+  list-style: none;
+  margin-right: -36px;
+  width: 714px;
+  height: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.li {
+  width: 300px;
+  height: 50px;
+  display: flex;
+  margin-right: 10px;
+  padding-right: 20px;
+  list-style-type: none;
+  font-size: 20px;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+
+  text-decoration: none;
+  background-color: #072a48;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.li a:hover {
+  background-color: #0e4b78;
+  color: #f0f0f0;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.li a:active {
+  background-color: #03466e;
+  color: #ddd;
+  transform: scale(0.95);
+}
+
+hr {
+  margin: 30px 0 0 0;
+  border: none;
+  height: 2px;
+  background-color: #072a48;
+  /* margin: 20px 0; */
+}
+
+.signUpInput p {
+  color: #a4a1aa;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 600px) {
+  .image {
+    display: none;
+  }
+
+  .box {
+    display: flex;
+    width: 100%;
+    /* width: 400px; */
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+
+  .MuiInputBase-root {
+    width: 400px;
+  }
+
+  .MuiBox-root {
+    width: 501px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .MuiFormControl-root {
+    border-radius: 10px;
+    margin: 8px;
+    /* width: 80ch; */
+    border-color: #072a48;
+    color: #072a48;
+  }
+
+  .MuiFormLabel-root {
+    color: #072a48;
+  }
+
+  .MuiInputBase-root {
+    color: #072a48;
+  }
+
+  .ul {
+    display: flex;
+    list-style: none;
+    margin-right: 27px;
+    /* width: 714px; */
+    /* height: 100%; */
+    justify-content: space-evenly;
+    flex-direction: column;
+    /* flex-wrap: wrap; */
+    align-content: center;
+    align-items: stretch;
+  }
+}

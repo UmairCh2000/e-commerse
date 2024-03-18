@@ -1,0 +1,60 @@
+.mainProduct {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.headerMain {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  color: #072a48;
+}
+
+.subHeaderMain {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  color: #696767;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+.subHeaderMain a {
+  padding: 10px;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  color: #696767;
+  text-align: center;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.productsFashion {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.sortingDropdowns {
+  width: 100%;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 294px;
+}

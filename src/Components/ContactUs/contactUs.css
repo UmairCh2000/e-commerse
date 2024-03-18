@@ -1,0 +1,118 @@
+* {
+  font-family: Nunito, sans-serif;
+}
+
+.body {
+  display: flex;
+  margin-top: 22px;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.body h2 {
+  font-size: 40px;
+  font-weight: 600;
+  color: #696767;
+}
+
+.contain {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 30px;
+  background-color: #072a48;
+  /* background-color: rgb(96, 164, 224); */
+  border-radius: 20px;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 1000px;
+}
+
+.contact-info img {
+  height: 32px;
+  width: 32px;
+}
+
+.contain p {
+  color: #fff;
+  font-size: 20px;
+}
+
+.contact-info h2 {
+  margin-top: 20px;
+}
+
+.form {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+.contact-info label {
+  color: #fff;
+  display: block;
+  margin-top: 5px;
+}
+
+/* input[type="text"], */
+.contact-info input,
+textarea {
+  border-style: none;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 15px 0 0 0;
+}
+input[type="submit"] {
+  background-color: #8a8a8a;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.contact-info a {
+  text-decoration: none;
+  border: none;
+  color: #8a8a8a;
+}
+
+@media (max-width: 600px) {
+  .body {
+    display: flex;
+    margin-top: 22px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .contain {
+    width: -webkit-fill-available;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-color: #072a48;
+    /* background-color: rgb(96, 164, 224); */
+    border-radius: 20px;
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    /* width: 1000px; */
+    align-items: center;
+  }
+  .contact-info {
+    padding: 20px;
+  }
+
+  .form {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-evenly;
+  }
+}

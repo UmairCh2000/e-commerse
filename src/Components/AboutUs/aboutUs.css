@@ -1,0 +1,262 @@
+* {
+  font-family: Nunito, sans-serif;
+}
+
+.mainContainer {
+  padding: 10px 30px 10px 30px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-block {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto 0 auto;
+  justify-content: flex-start;
+}
+
+.Container {
+  margin: 50px auto 50px auto;
+  justify-content: center;
+  align-items: center;
+  max-width: 1320px;
+  padding: 10px;
+}
+
+.mainImg {
+  color: black;
+  width: 400px;
+  height: 800px;
+  height: auto;
+  box-shadow: rgba(0.027, 0.165, 0.282, 0.3) 0px 5px 33px 3px;
+  border-radius: 10px;
+}
+
+.headingText {
+  color: #072a48;
+  font-size: 30px;
+  font-weight: 1000;
+  line-height: 34px;
+  padding: 0px 10px 0px 10px;
+  margin: 0 0 10px 0;
+}
+
+.allText {
+  padding: 0px;
+  width: 40%;
+  margin: 0 60px 0 40px;
+}
+
+.subHeadingText {
+  color: rgb(102, 102, 102);
+  font-size: 25px;
+  line-height: 34px;
+  font-weight: 700;
+  padding: 0 10px 0 10px;
+  margin: 0 0 15px 0;
+}
+
+.description {
+  font-size: 25px;
+  line-height: 34px;
+  color: rgb(102, 102, 102);
+  margin: 0 0 50px 0;
+  padding: 0 10px 0 10px;
+}
+
+.bottomContainer {
+  flex-direction: row-reverse;
+  margin: 100px auto 50px auto;
+}
+
+.bottomText li {
+  list-style-type: none;
+  list-style: none;
+  font-size: 20px;
+}
+
+.bottomText li a {
+  text-decoration: none;
+  border: none;
+  color: #072a48;
+  background-color: #8a8a8a;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.bottomText li a:hover {
+  color: #fff;
+  background-color: #072a48;
+}
+
+@media (max-width: 1024px) {
+  .container-block.Container {
+    max-width: 750px;
+  }
+
+  .mainImg {
+    width: 15%;
+    height: auto;
+  }
+
+  .text-blk.description {
+    font-size: 20px;
+  }
+
+  .allText {
+    width: 40%;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 20px;
+  }
+
+  .container-block.mainContainer {
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+  }
+
+  .text-blk.subHeadingText {
+    font-size: 22px;
+  }
+
+  .container-block.Container.bottomContainer {
+    margin: 80px auto 50px auto;
+  }
+
+  .container-block.Container {
+    max-width: 830px;
+  }
+
+  .allText.aboveText {
+    margin: 30px 0 0 40px;
+  }
+
+  .allText.bottomText {
+    margin: 30px 40px 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .mainImg {
+    width: 90%;
+  }
+
+  .allText {
+    width: 100%;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+  }
+
+  .container-block.Container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .text-blk.headingText {
+    text-align: center;
+  }
+
+  .text-blk.subHeadingText {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .text-blk.description {
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .allText {
+    margin-top: 40px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+  }
+
+  .allText.aboveText {
+    margin: 40px 0 0 0;
+  }
+
+  .container-block.Container {
+    margin: 80px auto 50px auto;
+  }
+
+  .container-block.Container.bottomContainer {
+    margin: 50px auto 50px auto;
+  }
+
+  .allText.bottomText {
+    margin: 40px 0 0 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .container-block.Container {
+    padding-top: 10px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    /* width: 100%; */
+    /* max-width: 100%; */
+  }
+
+  .mainImg {
+    width: 50%;
+  }
+
+  .container-block.mainContainer {
+    padding-top: 10px;
+    padding-right: 25px;
+    padding-bottom: 10px;
+    /* padding-left: 25px; */
+  }
+
+  .text-blk.subHeadingText {
+    font-size: 25px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+  }
+
+  .text-blk.description {
+    font-size: 25px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+  }
+
+  .allText {
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    width: 100%;
+  }
+
+  .description {
+    font-size: 20px;
+    line-height: 35px;
+    color: rgb(102, 102, 102);
+    margin: 0 0 50px 0;
+    padding: 0 10px 0 10px;
+    text-align: center;
+  }
+}
