@@ -82,8 +82,8 @@
   display: flex;
   list-style: none;
   margin-right: -36px;
-  width: 714px;
-  height: 100%;
+  /* width: 714px;
+  height: 100%; */
   justify-content: space-between;
   flex-direction: column;
   flex-wrap: wrap;
@@ -151,6 +151,12 @@ hr {
     display: none;
   }
 
+  .signUpInput p {
+    width: 50%;
+    color: #a4a1aa;
+    margin: 0;
+    padding: 0;
+  }
   .box {
     display: flex;
     width: 100%;
@@ -161,6 +167,8 @@ hr {
   }
 
   .content {
+    width: 100%;
+
     display: flex;
     flex-direction: column;
     align-content: center;
@@ -169,10 +177,14 @@ hr {
 
   .MuiInputBase-root {
     width: 400px;
+    display: flex;
+    /* width: 150px; */
+    margin: 10px;
+    border-radius: 50px;
   }
 
   .MuiBox-root {
-    width: 501px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     align-items: stretch;
@@ -181,7 +193,6 @@ hr {
   .MuiFormControl-root {
     border-radius: 10px;
     margin: 8px;
-    /* width: 80ch; */
     border-color: #072a48;
     color: #072a48;
   }
@@ -205,5 +216,13 @@ hr {
     /* flex-wrap: wrap; */
     align-content: center;
     align-items: stretch;
+  }
+
+  .MuiTextField-root {
+    border-radius: 10px;
+    margin: 8px;
+    /* width: 80ch; */
+    border-block-color: #1a237e;
+    color: #1a237e;
   }
 }

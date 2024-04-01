@@ -1,3 +1,7 @@
+body {
+  width: 100%;
+}
+
 .body {
   display: flex;
   margin-top: 0px;
@@ -103,14 +107,15 @@
     height: auto;
   }
   .mobileContainer {
-    margin-right: auto;
+    width: 100%;
+    /* margin-right: auto; */
     display: flex;
     flex-direction: row;
-    align-items: stretch;
+    /* justify-content: center; */
   }
-
   .mobileContainer .timeess {
-    margin-left: 144px;
+    width: 100px;
+    margin: 10px 0 0 194px;
     display: flex;
     flex-direction: row;
     align-items: center;

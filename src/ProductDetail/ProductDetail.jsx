@@ -254,7 +254,9 @@ const ProductDetail = () => {
           </div>
           <h1>${currentProduct.price}</h1>
           <h1>Details:</h1>
-          <p>{currentProduct.description}</p>
+          <p style={{ lineHeight: "25px", textTransform: "lowercase" }}>
+            {currentProduct.description}
+          </p>
           <div className="productAddToCartBtn">
             <button className=" increament " onClick={decrementQuantity}>
               -
@@ -325,7 +327,7 @@ const ProductDetail = () => {
             )}
           </div>
 
-          <div className="freeShipping">
+          <div className="cardDetailsFreeShipping">
             <img src={freeShip} alt="" />
             <p>
               <b>Free Shipping & Returns:</b>On all orders over $75

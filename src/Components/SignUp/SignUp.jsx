@@ -64,7 +64,7 @@ const SignUp = () => {
             "& .MuiTextField-root": {
               borderRadius: "20px",
               m: 2,
-              width: "80ch",
+              width: "100%",
               borderBlockColor: indigo[900],
               color: indigo[900],
             },
@@ -72,7 +72,7 @@ const SignUp = () => {
           noValidate
           autoComplete="off"
         >
-          <div>
+          <div className="creatNew">
             <TextField
               sx={{
                 borderRadius: "10px",

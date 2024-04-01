@@ -11,7 +11,7 @@
   display: flex;
   height: fit-content;
   width: 320px;
-  background: #fff;
+  background: #f6f6f6;
   border-radius: 10px;
   margin: 20px;
   padding: 20px;
@@ -28,12 +28,12 @@
 }
 
 .product-price-btn button:hover {
-  background-color: #ff4646;
-  color: #fff;
+  background-color: #fff;
+  color: #072a48;
 }
 
 .product-price-btn p {
-  margin: 0 0 0 38px;
+  margin: 38px 0 0 38px;
   width: -webkit-fill-available;
   font-size: 38px;
   font-weight: lighter;
@@ -53,6 +53,7 @@
   color: #fff;
   background-color: #072a48;
   cursor: pointer;
+  margin: 38px 0 0 0;
 }
 
 .product-price-btn {

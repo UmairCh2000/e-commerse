@@ -81,7 +81,7 @@ const SignIn = () => {
             <FormControl
               sx={{
                 m: 1,
-                width: "80ch",
+                width: "100%",
                 borderBlockColor: indigo[900],
                 borderRadius: "10px",
               }}

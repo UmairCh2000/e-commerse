@@ -10,7 +10,7 @@ export function ProductCards({ props }) {
     navigate(`/product/${props.id}`);
   };
   return (
-    <div className="cardMain">
+    <div className="cardMain" onClick={handleCardRedirect}>
       <div className="productImg">
         <img src={props.image} alt="" />
       </div>

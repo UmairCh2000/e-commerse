@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import "./home.css";
 import topimage from "../../assets/images/Home/landimage1.png";
@@ -187,11 +187,37 @@ const Home = () => {
       children: `${name.split(" ")[0][0]}${name.split(" ")[1][0]}`,
     };
   }
+  const [currentFeatureIndex, setCurrentFeatureIndex] = useState(0);
+
   useEffect(() => {
-    const intervalId = setInterval(nextSlide, 2000);
+    const intervalId = setInterval(() => {
+      setCurrentFeatureIndex((prevIndex) => (prevIndex + 1) % 4);
+    }, 3000); // Change feature every 3 seconds
 
     return () => clearInterval(intervalId);
-  }, [currentSlide]);
+  }, []);
+
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      if (sliderRef.current) {
+        // Calculate the new scroll position
+        const scrollLeft = sliderRef.current.scrollLeft + 2;
+        const maxScrollLeft =
+          sliderRef.current.scrollWidth - sliderRef.current.clientWidth;
+        // If we reach the end, go back to the beginning
+        const nextScrollLeft = scrollLeft >= maxScrollLeft ? 0 : scrollLeft;
+        sliderRef.current.scrollTo({
+          left: nextScrollLeft,
+          behavior: "smooth",
+        });
+      }
+    }, 90); // Adjust the interval duration as needed
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <>
       <div className="main">
@@ -264,7 +290,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="features">
+        <div className="features1">
           <div className="highQuality">
             <img src={quality} alt="" />
             <div className="text">
@@ -295,6 +321,44 @@ const Home = () => {
           </div>
         </div>
 
+        <div className="features">
+          <div
+            className="feature"
+            style={{
+              transform: `translateX(${-currentFeatureIndex * 100}%)`,
+            }}
+          >
+            <div className="highQuality">
+              <img src={quality} alt="" />
+              <div className="text">
+                <h3 style={{ marginBottom: "5px" }}>High Quality</h3>
+                <p style={{ marginTop: "10px" }}>Crafted from top materials</p>
+              </div>
+            </div>
+            <div className="warrantyProtection">
+              <img src={warrant} alt="" />
+              <div className="text">
+                <h3 style={{ marginBottom: "5px" }}>Warranty Protection</h3>
+                <p style={{ marginTop: "10px" }}>Over 2 years</p>
+              </div>
+            </div>
+            <div className="freeShipping">
+              <img src={ship} alt="" />
+              <div className="text">
+                <h3 style={{ marginBottom: "5px" }}>Free Shipping</h3>
+                <p style={{ marginTop: "10px" }}>Order over $150</p>
+              </div>
+            </div>
+            <div className="support">
+              <img src={support} alt="" />
+              <div className="text">
+                <h3 style={{ marginBottom: "5px" }}>24/7 Support</h3>
+                <p style={{ marginTop: "10px" }}>Dedicated support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="followUs">
           <h1 style={{ marginTop: "50px" }}>Follow Us On Instagram</h1>
           <p style={{ textAlign: "center", width: "500px" }}>
@@ -303,10 +367,34 @@ const Home = () => {
             Join our vibrant community of trendsetters and fashion enthusiasts.
             Let's ignite your passion for style together.
           </p>
-          <div
+
+          {/* <div
             data-aos="flip-left"
             className="followUsPictures aos-init aos-animate"
           >
+            <img src={FUimg1} alt="" />
+            <img src={FUimg2} alt="" />
+            <img src={FUimg3} alt="" />
+            <img src={FUimg4} alt="" />
+            <img src={FUimg5} alt="" />
+            <img src={FUimg6} alt="" />
+            <img src={FUimg7} alt="" />
+          </div> */}
+
+          <div
+            data-aos="flip-left"
+            className="followUsPictures aos-init aos-animate"
+            ref={sliderRef}
+          >
+            {/* Your images */}
+            <img src={FUimg1} alt="" />
+            <img src={FUimg2} alt="" />
+            <img src={FUimg3} alt="" />
+            <img src={FUimg4} alt="" />
+            <img src={FUimg5} alt="" />
+            <img src={FUimg6} alt="" />
+            <img src={FUimg7} alt="" />
+            {/* Duplicate the images to ensure seamless scrolling */}
             <img src={FUimg1} alt="" />
             <img src={FUimg2} alt="" />
             <img src={FUimg3} alt="" />
@@ -325,7 +413,7 @@ const Home = () => {
             </button>
             {/* Render up to three testimonials starting from the current slide */}
             {testimonialsData
-              .slice(currentSlide, currentSlide + 3)
+              .slice(currentSlide, currentSlide + 1)
               .map((testimonial, index) => (
                 <div
                   key={index + currentSlide}
@@ -333,33 +421,15 @@ const Home = () => {
                     index === 0 ? "testimonialSlide active" : "testimonialSlide"
                   }
                 >
-                  <Card
-                    style={{
-                      margin: "0 10px 50px 10px",
-                      padding: "10px",
-                      maxWidth: 445,
-                      maxHeight: 445,
-                      backgroundColor: "#072a48",
-                      color: "#7c878c",
-                    }}
-                  >
+                  <div className="testimonialsContent">
                     <Avatar
                       style={{ padding: "10px" }}
                       {...stringAvatar(testimonial.name)}
                     />
-                    <CardContent>
-                      <Typography gutterBottom variant="h4" component="div">
-                        {testimonial.name}
-                      </Typography>
-                      <Typography
-                        style={{ color: "#fff" }}
-                        variant="body1"
-                        color="text.secondary"
-                      >
-                        {testimonial.text}
-                      </Typography>
-                    </CardContent>
-                  </Card>
+
+                    <h2>{testimonial.name}</h2>
+                    <p>{testimonial.text}</p>
+                  </div>
                 </div>
               ))}
             <button className="testinomialNext" onClick={nextSlide}>

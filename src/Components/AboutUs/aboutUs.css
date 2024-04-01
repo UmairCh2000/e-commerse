@@ -96,7 +96,9 @@
   .container-block.Container {
     max-width: 750px;
   }
-
+  .container-block {
+    width: 90%;
+  }
   .mainImg {
     width: 15%;
     height: auto;
@@ -257,6 +259,10 @@
     color: rgb(102, 102, 102);
     margin: 0 0 50px 0;
     padding: 0 10px 0 10px;
+    text-align: center;
+  }
+
+  .subHeadingText {
     text-align: center;
   }
 }

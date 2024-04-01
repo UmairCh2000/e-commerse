@@ -166,20 +166,20 @@
   color: #072a48;
 }
 
-.freeShipping {
+.cardDetailsFreeShipping {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
 }
-.freeShipping img {
+.cardDetailsFreeShipping img {
   margin: 0;
   padding-right: 10px;
   width: 40px;
   height: 40px;
 }
 
-.freeShipping p {
+.cardDetailsFreeShipping p {
   padding-top: 20px;
   font-size: 20px;
   color: #072a48;
@@ -193,6 +193,7 @@
 
   .mainProduct {
     display: flex;
+    width: auto;
     height: 100%;
     flex-direction: column;
     align-items: center;
